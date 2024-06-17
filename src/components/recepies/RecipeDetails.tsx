@@ -4,6 +4,7 @@ import { getRecepie } from "../../lib/getRecepie";
 import Spinner from "../spinner/Spinner";
 import { useNavigate, useParams } from "react-router-dom";
 import { FaArrowAltCircleLeft } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 interface ItemProps {
   name: string;
@@ -65,7 +66,10 @@ const RecipeDetails = () => {
       <div className={styles.wrapper}>
         <div className={styles.left}>
           <div className={styles.img}>
-            <img
+            <motion.img
+              initial={{ x: -300 }}
+              animate={{ x: 0 }}
+              transition={{ type: "spring", stiffness: 80 }}
               className={styles.image}
               src={recipe.image}
               alt={recipe.name}
@@ -73,7 +77,14 @@ const RecipeDetails = () => {
           </div>
         </div>
         <div className={styles.right}>
-          <h3 className={styles.item_name}>{recipe.name}</h3>
+          <motion.h3
+            initial={{ y: -300 }}
+            animate={{ y: 0 }}
+            transition={{ type: "spring", stiffness: 80 }}
+            className={styles.item_name}
+          >
+            {recipe.name}
+          </motion.h3>
           <div className={styles.info}>
             <p className={styles.cuisine}>{recipe.cuisine}</p>
             <div className={styles.content}>
@@ -86,22 +97,32 @@ const RecipeDetails = () => {
             </div>
             <div className={styles.desc}>
               <p className={styles.label}>Description:</p>
-              <p className={styles.details}>
+              <motion.p
+                initial={{ y: 50 }}
+                animate={{ y: 0 }}
+                transition={{ duration: 0.5 }}
+                className={styles.details}
+              >
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
                 ab tempore eaque ullam et doloribus repellat placeat rem
                 praesentium quam quidem, veniam iure aliquam, recusandae vitae
                 dolore laborum aspernatur? Aut.
-              </p>
+              </motion.p>
             </div>
             <div className={styles.customer}>
               <div className={styles.c_details}>
                 <h3 className={styles.initial}>JD</h3>
                 <p className={styles.fullName}>Jane Doe</p>
               </div>
-              <p className={styles.customer_review}>
+              <motion.p
+                initial={{ y: 50 }}
+                animate={{ y: 0 }}
+                transition={{ duration: 0.5 }}
+                className={styles.customer_review}
+              >
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta
                 animi ipsa explicabo sed alias corporis aliquam sit optio.
-              </p>
+              </motion.p>
               <small className={styles.date}>12 May, 2024</small>
             </div>
           </div>

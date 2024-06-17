@@ -18,6 +18,51 @@
   font-size: 2.3rem;
   color: #ccc;
 }
+.gradient {
+  background: linear-gradient(
+    to right,
+    rgba(25, 11, 107, 0.77),
+    rgba(248, 246, 247, 0.87),
+    rgb(99, 5, 33)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 2.5px;
+}
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.hi {
+  animation: byby 5s linear infinite;
+  font-size: 4.5rem;
+}
+
+@keyframes byby {
+  0% {
+    transform: rotate(0) translateY(-15px);
+  }
+  25% {
+    transform: rotate(45deg) translateY(-15px);
+  }
+  50% {
+    transform: rotate(0) translateY(-15px);
+  }
+  75% {
+    transform: rotate(45deg) translateY(-15px);
+  }
+  100% {
+    transform: rotate(0) translateY(-15px);
+  }
+}
+.leedonson {
+  margin-top: 2rem;
+  text-decoration: underline;
+  color: blue;
+}
 .desc {
   font-weight: 400;
   font-family: tahoma;

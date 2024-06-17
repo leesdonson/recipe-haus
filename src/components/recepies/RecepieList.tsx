@@ -4,6 +4,7 @@ import styles from "./recepieList.module.css";
 import { Link } from "react-router-dom";
 import RecepieCard from "./RecepieCard";
 import Spinner from "../spinner/Spinner";
+import { motion } from "framer-motion";
 
 interface ItemProps {
   name: string;
@@ -33,13 +34,25 @@ const RecepieList = () => {
     recipes?.length == 0 ? (
       <p>No Recepies available</p>
     ) : (
-      <div className={styles.card}>
+      <motion.div
+        initial={{
+          x: -100,
+        }}
+        animate={{
+          x: 0,
+        }}
+        transition={{
+          type: "spring",
+          stiffness: 80,
+        }}
+        className={styles.card}
+      >
         {recipes?.map((recipe: ItemProps) => (
           <Link key={recipe.name} to={`/recipe/details/${recipe.id}`}>
             <RecepieCard recipe={recipe} />
           </Link>
         ))}
-      </div>
+      </motion.div>
     );
 
   if (loading) return <Spinner />;

@@ -5,10 +5,21 @@ const DiscoverProfile = () => {
   return (
     <section className={styles.container}>
       <div className={styles.wrapper}>
-        <h1 className={styles.heading}>
-          Hi 👋 <br />
+        <div className={styles.box}>
+          <h1 className={styles.heading}>Hi</h1>
+          <span className={styles.hi}>👋</span>
+        </div>
+        <h1 className={`${styles.heading} ${styles.gradient}`}>
           I'm Lee Donson
         </h1>
+        <Link
+          className={styles.leedonson}
+          to="https://donsonlee.vercel.app"
+          target="_blank"
+        >
+          Find out more about me
+        </Link>
+
         <p className={styles.desc}>
           I am a software developer based in Port Moresby. I am the core founder
           of{" "}

@@ -3,6 +3,35 @@
   width: 100%;
   padding: 1rem 0.4rem;
 }
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 0.5rem;
+  font-weight: 500;
+}
+.count {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #ccc;
+  font-family: tahoma;
+  background-color: blue;
+  border-radius: 50%;
+  padding: 0.5rem 0.8rem;
+}
+.button {
+  background: linear-gradient(to right, rgb(25, 11, 107), rgb(248, 246, 247));
+  padding: 0.3rem 1rem;
+  border: 1px solid gray;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #000;
+  width: 8rem;
+  outline: none;
+}
 .card {
   width: 100%;
   display: grid;

@@ -12,7 +12,7 @@ const Home = () => {
           transition={{ type: "spring", stiffness: 40 }}
           className={styles.heading}
         >
-          Fine New Recipes everyday
+          Find New Recipe everyday
         </motion.h1>
       </div>
       <div className={styles.bottom}>
@@ -22,7 +22,7 @@ const Home = () => {
           transition={{ type: "spring", stiffness: 40 }}
           className={styles.btn}
         >
-          <Link to={"/discover-profile"}> Discover</Link>
+          <Link to={"/discover-profile"}>About us</Link>
           <span className={styles.spans}></span>
         </motion.button>
         <motion.button
@@ -31,7 +31,7 @@ const Home = () => {
           transition={{ type: "spring", stiffness: 40 }}
           className={styles.btn}
         >
-          <Link to={"/recepies"}>Browse</Link>
+          <Link to={"/recepies"}>View Recipes</Link>
           <span className={styles.spans}></span>
         </motion.button>
       </div>

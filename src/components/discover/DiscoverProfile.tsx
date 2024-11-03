@@ -26,7 +26,7 @@ const DiscoverProfile = () => {
           <Link
             className={styles.krintifalab}
             target="_blank"
-            to="https://www.krintifalab.com"
+            to="https://krintifalab.com"
           >
             Krintifa Lab{" "}
           </Link>

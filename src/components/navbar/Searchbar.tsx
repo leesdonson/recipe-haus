@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import styles from "./searchBar.module.css";
 import { IoSearch } from "react-icons/io5";
-import { getRecepies } from "../../lib/getRecepie";
+import { searchRecipes } from "../../lib/getRecepie";
 import { Link } from "react-router-dom";
 
 interface ItemProps {
@@ -17,7 +17,7 @@ const SearchBar = () => {
 
   useEffect(() => {
     const getDate = async () => {
-      const result = await getRecepies();
+      const result = await searchRecipes();
       if (result.recipes) {
         setShow(true);
         setItems(result.recipes);

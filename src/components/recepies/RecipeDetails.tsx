@@ -37,6 +37,7 @@ const RecipeDetails = () => {
   if (!id) throw new Error("Id is missing.");
 
   useEffect(() => {
+    document.title = "Recipe Details | Recipe Haus";
     setLoading(true);
 
     const getData = async (id: number) => {
@@ -49,7 +50,7 @@ const RecipeDetails = () => {
     const recipeId = parseInt(id);
 
     getData(recipeId);
-  }, []);
+  }, [id]);
 
   if (loading) return <Spinner />;
 
